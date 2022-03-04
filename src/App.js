@@ -45,8 +45,8 @@ function App() {
     e.preventDefault();
     user = user.filter(element => element.email === form.email.trim());
     if (
-      form.email.trim() === user[0].email &&
-      form.password.trim() === user[0].password
+      form.email.trim() === user[0]?.email &&
+      form.password.trim() === user[0]?.password
     ) {
       setLoggedIn(true);
       localStorage.setItem(
